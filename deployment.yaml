@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mymavenapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mymavenapp
+  template:
+    metadata:
+      labels:
+        app: mymavenapp
+    spec:
+      containers:
+      - name: mymavenapp
+        image: <your-dockerhub-username>/mymavenapp:v1
+        ports:
+        - containerPort: 8080
