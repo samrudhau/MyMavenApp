@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mymavenapp
-        image: <your-dockerhub-username>/mymavenapp:v1
+        image: samrudhau/mymavenapp:v1
         ports:
         - containerPort: 8080
